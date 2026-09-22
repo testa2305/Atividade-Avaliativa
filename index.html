@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechStore - catálogo de produtos de tecnologia" />
+  <title>TechStore | Tecnologia para você</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="logo">Tech<span>Store</span></div>
+
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+
+      <button id="cartButton" class="cart-button">
+        🛒 Carrinho <span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero-content">
+        <div>
+          <p class="tag">TECNOLOGIA E INOVAÇÃO</p>
+
+          <h1>
+            Tecnologia que
+            <span>combina com você.</span>
+          </h1>
+
+          <p class="hero-text">
+            Encontre smartphones, notebooks, acessórios e muito mais
+            em um só lugar.
+          </p>
+
+          <a href="#produtos" class="hero-button">
+            Ver produtos
+          </a>
+        </div>
+
+        <div class="hero-icon">
+          💻
+        </div>
+      </div>
+    </section>
+
+    <section id="produtos" class="products-section">
+      <div class="container">
+        <div class="section-title">
+          <p class="tag">NOSSO CATÁLOGO</p>
+          <h2>Produtos em destaque</h2>
+          <p>Escolha uma categoria ou procure pelo produto.</p>
+        </div>
+
+        <div class="controls">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="🔎 Procurar produto..."
+          />
+
+          <select id="categoryFilter">
+            <option value="todos">Todas as categorias</option>
+            <option value="smartphones">Smartphones</option>
+            <option value="notebooks">Notebooks</option>
+            <option value="acessorios">Acessórios</option>
+          </select>
+        </div>
+
+        <div id="productList" class="product-grid"></div>
+      </div>
+    </section>
+
+    <section id="sobre" class="about">
+      <div class="container">
+        <div>
+          <p class="tag">SOBRE A TECHSTORE</p>
+          <h2>Inovação ao seu alcance.</h2>
+        </div>
+
+        <p>
+          A TechStore é uma empresa fictícia criada para um projeto
+          acadêmico. Nosso objetivo é oferecer uma experiência simples
+          para pesquisar e conhecer produtos de tecnologia.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 TechStore - Projeto acadêmico</p>
+  </footer>
+
+  <div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal" class="close">×</button>
+
+      <h2>🛒 Seu carrinho</h2>
+
+      <div id="cartItems"></div>
+
+      <div class="cart-total">
+        Total: R$ <span id="cartTotal">0,00</span>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
